@@ -8,7 +8,7 @@ import java.time.LocalDateTime;
 @MongoEntity(collection = "auditoria")
 public class Auditoria {
     private ObjectId id;
-    private String usuario;
+    private String ipUsuario;
     private LocalDateTime fechaCreacion;
     /*
      * 1 - registro
@@ -17,8 +17,8 @@ public class Auditoria {
     private Long tipoOperacion;
     private Boolean exito;
 
-    public Auditoria(String usuario, LocalDateTime fechaCreacion, Long tipoOperacion, Boolean exito) {
-        this.usuario = usuario;
+    public Auditoria(String ipUsuario, LocalDateTime fechaCreacion, Long tipoOperacion, Boolean exito) {
+        this.ipUsuario = ipUsuario;
         this.fechaCreacion = fechaCreacion;
         this.tipoOperacion = tipoOperacion;
         this.exito = exito;
@@ -35,12 +35,12 @@ public class Auditoria {
         this.id = id;
     }
 
-    public String getUsuario() {
-        return usuario;
+    public String getIpUsuario() {
+        return ipUsuario;
     }
 
-    public void setUsuario(String usuario) {
-        this.usuario = usuario;
+    public void setIpUsuario(String ipUsuario) {
+        this.ipUsuario = ipUsuario;
     }
 
     public LocalDateTime getFechaCreacion() {
